@@ -1,5 +1,5 @@
 const { User } = require("../../db/userModel");
-const { sendEmail } = require("../../helpers/sendEmail");
+const { sendEmail } = require("../../services/email/sendEmail");
 const { HttpError } = require("../../helpers/index");
 
 const reVerificationOfEmail = async (req, res, next) => {

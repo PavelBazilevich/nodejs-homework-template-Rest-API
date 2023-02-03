@@ -1,5 +1,5 @@
 const nodemailer = require("nodemailer");
-const { HttpError } = require("./index");
+const { HttpError } = require("../../helpers/index");
 const { EMAIL_USER, EMAIL_PASS } = process.env;
 const dotenv = require("dotenv");
 dotenv.config();

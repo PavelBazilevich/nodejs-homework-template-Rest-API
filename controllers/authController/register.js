@@ -1,6 +1,6 @@
 const { User } = require("../../db/userModel");
 const { HttpError } = require("../../helpers/index");
-const { sendEmail } = require("../../helpers/sendEmail");
+const { sendEmail } = require("../../services/email/sendEmail");
 const { nanoid } = require("nanoid");
 const bcrypt = require("bcrypt");
 const gravatar = require("gravatar");
