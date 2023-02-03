@@ -9,10 +9,6 @@ const {
 const { currentUser } = require("../../controllers/authController/currentUser");
 const { logoutUser } = require("../../controllers/authController/logoutUser");
 const { auth, checkChangeSubscription } = require("../../middelwares/index");
-const {
-  changeUserAvatar,
-} = require("../../controllers/authController/changeUserAvatar");
-const { upload } = require("../../middelwares/upload");
 
 authRouter.post("/register", register);
 authRouter.post("/login", tryCatchWrapper(login));
@@ -23,12 +19,6 @@ authRouter.patch(
   auth,
   changeSubscription,
   tryCatchWrapper(checkChangeSubscription)
-);
-authRouter.patch(
-  "/avatars",
-  auth,
-  upload.single("avatar"),
-  tryCatchWrapper(changeUserAvatar)
 );
 
 module.exports = authRouter;
