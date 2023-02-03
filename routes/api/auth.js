@@ -27,11 +27,12 @@ authRouter.patch(
   changeSubscription,
   tryCatchWrapper(checkChangeSubscription)
 );
+
 authRouter.patch(
   "/avatars",
   auth,
   upload.single("avatar"),
   tryCatchWrapper(changeUserAvatar)
 );
-
+module.exports = authRouter;
 module.exports = authRouter;
